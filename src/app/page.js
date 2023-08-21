@@ -20,9 +20,6 @@ export default function Home() {
             <CssBaseline />
             <Header />
             <GridContainer>
-                {/* <div className={styles.anchor} id="Home">
-                        Hello
-                    </div> */}
             </GridContainer>
         </ThemeProvider>
     );

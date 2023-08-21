@@ -22,7 +22,7 @@ const CustomCarousel = styled(Carousel)(({theme}) => ({
     height: "300px"
 }));
 
-const slides = ["http://localhost:3000/images/post.jpg", "http://localhost:3000/images/spiske.jpg", "http://localhost:3000/images/santos.jpg"];
+const slides = ["../images/post.jpg", "../images/spiske.jpg", "../images/santos.jpg"];
 
 function GridContainer() {
     return (
