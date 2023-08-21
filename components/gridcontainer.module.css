@@ -2,19 +2,38 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border-style: solid;
     display: flex;
-    height: 260px;
+    height: 480px;
 }
 
 .introContainer {
     margin: auto;
-    background-color: rgba(0,0,0,0.92);
-    width: 80%;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
     padding: 12px;
-    border-radius: 12px;
+    /* box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px; */
+}
+
+.introContainer h1 {
+    padding-top: 150px;
+}
+
+.introContainer h2 {
+    padding-bottom: 12px;
+}
+
+.carouselGrid {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
 }
 
 .gridbox {
-    background-color: #28313b;
+    background: rgb(0,36,31);
+    background: linear-gradient(90deg, rgba(0,36,31,1) 0%, rgba(9,113,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+.about {
+    margin-top: 0px;
+    padding-top: 0px;
 }

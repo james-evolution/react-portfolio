@@ -19,7 +19,7 @@ import CodeIcon from "@mui/icons-material/Code";
 import Avatar from "@mui/material/Avatar";
 import { useRouter } from "next/navigation";
 
-const pages = ["Home", "About", "Experience", "Projects"];
+const pages = ["Home", "About", "Experience", "Projects", "Contact"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function Header() {
@@ -45,7 +45,7 @@ function Header() {
     };
 
     return (
-        <AppBar position="static">
+        <AppBar position="static" sx={{paddingBottom: "8px"}}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     {/* Logo, Avatar, Username */}

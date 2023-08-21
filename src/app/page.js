@@ -19,8 +19,7 @@ export default function Home() {
         <ThemeProvider theme={darkTheme}>
             <CssBaseline />
             <Header />
-            <GridContainer suppressHydrationWarning={true}>
-            </GridContainer>
+            <GridContainer></GridContainer>
         </ThemeProvider>
     );
 }
