@@ -1,0 +1,8 @@
+.slideImage {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-style: solid;
+    display: flex;
+    height: 260px;
+}
