@@ -6,3 +6,15 @@
     display: flex;
     height: 260px;
 }
+
+.introContainer {
+    margin: auto;
+    background-color: rgba(0,0,0,0.92);
+    width: 80%;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.gridbox {
+    background-color: #28313b;
+}
