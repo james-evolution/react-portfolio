@@ -18,26 +18,37 @@ const Item = styled(Paper)(({ theme }) => ({
     color: theme.palette.text.secondary,
 }));
 
-const CustomCarousel = styled(Carousel)(({theme}) => ({
-    height: "300px"
+const CustomCarousel = styled(Carousel)(({ theme }) => ({
+    height: "300px",
 }));
 
-const slides = ["../images/post.jpg", "../images/spiske.jpg", "../images/santos.jpg"];
+const slides = [
+    "../images/post.jpg",
+    "../images/spiske.jpg",
+    "../images/santos.jpg",
+];
 
 function GridContainer() {
     return (
-        <Box sx={{ flexGrow: 1 }}>
+        <Box sx={{ flexGrow: 1, height: "100vw"}}>
             <Grid container spacing={2}>
                 <Grid xs={12}>
                     <Item>
                         <CustomCarousel>
                             {slides?.map((slide, index) => {
                                 return (
-                                    // <div>Test</div>
-                                    <div key={index} className={classes.slideImage} style={{"backgroundImage": `url(${slide})`}}>
-                                        <h1 style={{"margin":"auto"}}>Jeremy Alkire</h1>
+                                    <div
+                                        key={index}
+                                        className={classes.slideImage}
+                                        style={{
+                                            backgroundImage: `url(${slide})`,
+                                        }}
+                                    >
+                                        <h1 style={{ margin: "auto" }}>
+                                            Jeremy Alkire
+                                        </h1>
                                     </div>
-                                )
+                                );
                             })}
                         </CustomCarousel>
                     </Item>
@@ -52,7 +63,6 @@ function GridContainer() {
                 <Grid xs={4}>
                     <Item>xs=4</Item>
                 </Grid>
-                
             </Grid>
         </Box>
     );

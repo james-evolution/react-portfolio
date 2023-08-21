@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import styles from "./page.module.css";
+import classes from "./page.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "../../components/header";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
@@ -19,7 +19,7 @@ export default function Home() {
         <ThemeProvider theme={darkTheme}>
             <CssBaseline />
             <Header />
-            <GridContainer>
+            <GridContainer suppressHydrationWarning={true}>
             </GridContainer>
         </ThemeProvider>
     );
