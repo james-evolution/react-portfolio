@@ -1,12 +1,33 @@
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
+import TableCell, { tableCellClasses } from '@mui/material/TableCell';
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Tooltip, { tooltipClasses } from "@mui/material/Tooltip";
 import classes from "./languages.module.css";
 import Paper from "@mui/material/Paper";
+import { styled } from '@mui/material/styles';
+
+const StyledTableCell = styled(TableCell)(({ theme }) => ({
+    [`&.${tableCellClasses.head}`]: {
+      backgroundColor: theme.palette.common.black,
+      color: theme.palette.common.white,
+    },
+    [`&.${tableCellClasses.body}`]: {
+      fontSize: 14,
+    },
+  }));
+
+const StyledTableRow = styled(TableRow)(({ theme }) => ({
+    '&:nth-of-type(odd)': {
+      backgroundColor: theme.palette.action.hover,
+    },
+    // hide last border
+    '&:last-child td, &:last-child th': {
+    //   border: 0,
+    },
+  }));
 
 const rows = [
     createData("JavaScript", "2 years", "20 years"),
@@ -27,38 +48,38 @@ function Languages() {
         <TableContainer className={classes.table} component={Paper}>
             <Table aria-label="simple table">
                 <TableHead>
-                    <TableRow>
-                        <TableCell>Language</TableCell>
-                        <TableCell align="right">
+                    <StyledTableRow>
+                        <StyledTableCell>Language</StyledTableCell>
+                        <StyledTableCell align="right">
                             Professional Experience
-                        </TableCell>
-                        <TableCell align="right">
+                        </StyledTableCell>
+                        <StyledTableCell align="right">
                             <Tooltip title="Total time spent coding in this language. This includes personal projects, studies, and work experience.">
                                 Academic Experience
                             </Tooltip>
-                        </TableCell>
-                    </TableRow>
+                        </StyledTableCell>
+                    </StyledTableRow>
                 </TableHead>
                 <TableBody>
                     {rows.map((row) => (
-                        <TableRow
+                        <StyledTableRow
                             key={row.name}
                             sx={{
                                 "&:last-child td, &:last-child th": {
-                                    border: 0,
+                                    // border: 0,
                                 },
                             }}
                         >
-                            <TableCell component="th" scope="row">
+                            <StyledTableCell component="th" scope="row">
                                 {row.language}
-                            </TableCell>
-                            <TableCell align="right">
+                            </StyledTableCell>
+                            <StyledTableCell align="right">
                                 {row.workExperience}
-                            </TableCell>
-                            <TableCell align="right">
+                            </StyledTableCell>
+                            <StyledTableCell align="right">
                                 {row.totalExperience}
-                            </TableCell>
-                        </TableRow>
+                            </StyledTableCell>
+                        </StyledTableRow>
                     ))}
                 </TableBody>
             </Table>

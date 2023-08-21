@@ -91,7 +91,7 @@ function GridContainer() {
                                             </Stack>
                                             <Stack direction="row" spacing={1}>
                                                 <Chip
-                                                    label="Spring Boot"
+                                                    label="Spring"
                                                     color="success"
                                                     variant="outlined"
                                                     style={{
@@ -108,6 +108,15 @@ function GridContainer() {
                                                         color: "cyan",
                                                     }}
                                                 />
+                                                <Chip
+                                                    label="Next.js"
+                                                    color="success"
+                                                    variant="outlined"
+                                                    style={{
+                                                        borderColor: "#ef3774",
+                                                        color: "#ef3774",
+                                                    }}
+                                                />
                                             </Stack>
                                         </Stack>
                                     </div>
@@ -118,7 +127,7 @@ function GridContainer() {
                 </Grid>
 
                 <Grid className={classes.about} xs={12}>
-                    <About id="about"/>
+                    <About id="about" />
                 </Grid>
             </Grid>
         </Box>
