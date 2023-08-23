@@ -16,7 +16,7 @@ const darkTheme = createTheme({
 
 export default function Home() {
     return (
-        <main>
+        <main className={classes.main}>
             <ThemeProvider theme={darkTheme}>
                 <CssBaseline />
                 <Header />

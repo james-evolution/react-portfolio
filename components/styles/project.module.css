@@ -1,3 +1,26 @@
 .video {
     width: 40%;
+    margin-bottom: 0px;
+}
+
+.stack {
+    scrollbar-width: "thin";
+}
+
+.stack {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0,0,0,0.8);
+}
+
+/* Works on Chrome, Edge, and Safari */
+.stack::-webkit-scrollbar {
+    width: 12px;
+}
+
+.stack::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.2);
+}
+
+.stack::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.4);
 }
