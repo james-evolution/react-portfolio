@@ -5,15 +5,16 @@ import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Unstable_Grid2";
-import classes from "./about.module.css";
+import classes from "./styles/about.module.css";
 import Carousel from "react-material-ui-carousel";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 import { Divider } from "@mui/material";
 import CodeIcon from "@mui/icons-material/Code";
-import Languages from "./languages";
+import Languages from "./fluencies";
 import Typography from "@mui/material/Typography";
 import Technologies from "./technologies";
+import Fluencies from "./fluencies";
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === "dark" ? "rgba(0,0,0,0.5)" : "#fff",
@@ -45,7 +46,7 @@ function About() {
                     <Divider>
                         <CodeIcon />
                     </Divider>
-                    <Languages />
+                    <Fluencies />
                 </Item>
             </Grid>
 

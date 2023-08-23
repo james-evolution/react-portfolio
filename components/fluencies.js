@@ -5,13 +5,13 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Tooltip, { tooltipClasses } from "@mui/material/Tooltip";
-import classes from "./languages.module.css";
+import classes from "./styles/fluencies.module.css";
 import Paper from "@mui/material/Paper";
 import { styled } from '@mui/material/styles';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
-      backgroundColor: theme.palette.common.black,
+      backgroundColor: "#0a1819",
       color: theme.palette.common.white,
     },
     [`&.${tableCellClasses.body}`]: {
@@ -20,12 +20,15 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   }));
 
 const StyledTableRow = styled(TableRow)(({ theme }) => ({
+    '&:nth-of-type(even)': {
+        backgroundColor: "#103e42",
+      },
     '&:nth-of-type(odd)': {
-      backgroundColor: theme.palette.action.hover,
+      backgroundColor: "#0c2f33",
     },
     // hide last border
     '&:last-child td, &:last-child th': {
-    //   border: 0,
+      border: 0,
     },
   }));
 
@@ -43,7 +46,7 @@ function createData(language, workExperience, totalExperience) {
     return { language, workExperience, totalExperience };
 }
 
-function Languages() {
+function Fluencies() {
     return (
         <TableContainer className={classes.table} component={Paper}>
             <Table aria-label="simple table">
@@ -66,7 +69,7 @@ function Languages() {
                             key={row.name}
                             sx={{
                                 "&:last-child td, &:last-child th": {
-                                    // border: 0,
+                                    border: 0,
                                 },
                             }}
                         >
@@ -87,4 +90,4 @@ function Languages() {
     );
 }
 
-export default Languages;
+export default Fluencies;

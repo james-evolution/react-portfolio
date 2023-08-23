@@ -16,10 +16,12 @@ const darkTheme = createTheme({
 
 export default function Home() {
     return (
-        <ThemeProvider theme={darkTheme}>
-            <CssBaseline />
-            <Header />
-            <GridContainer></GridContainer>
-        </ThemeProvider>
+        <main>
+            <ThemeProvider theme={darkTheme}>
+                <CssBaseline />
+                <Header />
+                <GridContainer suppressHydrationWarning></GridContainer>
+            </ThemeProvider>
+        </main>
     );
 }
