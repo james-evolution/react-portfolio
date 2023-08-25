@@ -19,7 +19,7 @@ export default function Home() {
         <main className={classes.main}>
             <ThemeProvider theme={darkTheme}>
                 <CssBaseline />
-                <Header />
+                {/* <Header /> */}
                 <GridContainer suppressHydrationWarning></GridContainer>
             </ThemeProvider>
         </main>

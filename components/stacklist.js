@@ -13,10 +13,21 @@ import DialogTitle from "@mui/material/DialogTitle";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import Slide from "@mui/material/Slide";
 import classes from "./styles/stack.module.css";
+import Paper from "@mui/material/Paper";
+import Stack from "@mui/material/Stack";
+import { styled } from "@mui/material/styles";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
 });
+
+const Item = styled(Paper)(({ theme }) => ({
+    backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+    ...theme.typography.body2,
+    padding: theme.spacing(1),
+    textAlign: "center",
+    color: theme.palette.text.secondary,
+}));
 
 function StackList(props) {
     const [techList, setTechList] = useState([]);
@@ -74,17 +85,16 @@ function StackList(props) {
                             id="scroll-dialog-description"
                             tabIndex={-1}
                         >
-                            <List component="div" disablePadding>
+                            <Stack spacing={{ xs: 1, sm: 2 }} direction="row" useFlexGap flexWrap="wrap">
                                 {techList.map((title, index) => (
-                                    <ListItemButton key={index} sx={{ pl: 4 }}>
-                                        <Chip
-                                            label={title}
-                                            color="success"
-                                            style={{}}
-                                        />
-                                    </ListItemButton>
+                                    <Chip
+                                        key={index}
+                                        label={title}
+                                        color="success"
+                                        style={{}}
+                                    />
                                 ))}
-                            </List>
+                            </Stack>
                         </DialogContentText>
                     </DialogContent>
                     <DialogActions

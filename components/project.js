@@ -114,7 +114,7 @@ function Project(props) {
                 {/* <img src="./images/twthumb.png" sx={{ maxWidth: "200px" }} /> */}
 
                 {/* Project Image Previews */}
-                <ImageScroll title={props.title}/>
+                <ImageScroll title={props.title} />
                 {/* Project Description */}
                 {descriptions.map((desc, index) => {
                     return (
