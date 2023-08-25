@@ -85,7 +85,7 @@ function Projects() {
                             "A full-stack progressive web application that runs on desktop, mobile, and browser. Intended for customer and order tracking, it boasts an extensive feature list, which is outlined in the dropdown below.",
                             "Secured with user authentication and authorization and an email-based password reset system. There are different user roles in the system, each of which has different permissions.",
                             "It has a Slack-style instant messaging room with different channels, user avatars, presence indicators, and database-persisted chat history. Equipped with audit logs, administrative management systems, webhook integrations, and more.",
-                            "Total # of Contributors: 1 (Me)",
+                            "Total Contributors: 1 (Myself)",
                         ]}
                         website="https://trampolineworld.herokuapp.com/"
                         git="https://github.com/james-evolution/trampoline-world"
@@ -128,7 +128,7 @@ function Projects() {
                             "A full-stack web3 application that allows users to connect their crypto wallet and interact with smart contracts on the Ethereum network. Users can then mint non-fungible tokens directly through the application. Certain sections of the website are token-gated, requiring specific, non-fungible tokens for access.",
                             "This application utilizes numerous third-party libraries, frameworks, and a custom-built API.",
                             "Initial development of the project began in late 2022 at ETH San Francisco, winning a few event-sponsor prizes. It was then formally launched in 2023 and used extensively by its relevant community.",
-                            "Total # of Contributors: 6 (Four programmers, two artists)"
+                            "Total Contributors: 6 (Four programmers, two artists)"
                         ]}
                         website="https://duckgod.supducks.com/battle"
                         git=""

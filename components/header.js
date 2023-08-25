@@ -32,7 +32,7 @@ function Header() {
     };
 
     const handleCloseNavMenu = (page) => {
-        router.push("#" + page);
+        router.push(page);
         setAnchorElNav(null);
     };
 

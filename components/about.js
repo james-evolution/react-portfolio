@@ -85,8 +85,8 @@ function About() {
                         I've written software for a variety of companies and
                         clients (including celebrities), worked with
                         multi-million-dollar projects, and built full-stack web
-                        applications in both Java (Spring) and JavaScript
-                        (React/Next.js). I’ve also developed and deployed
+                        applications in both Java (with Spring) and JavaScript
+                        (with React/Next.js). I’ve also developed and deployed
                         security software to protect my clients from hackers,
                         scammers, and other cybercriminals in the crypto & web3
                         industry.

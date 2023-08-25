@@ -5,15 +5,16 @@ import Grid from "@mui/material/Unstable_Grid2";
 import classes from "./styles/project.module.css";
 import { Link } from "@mui/material";
 import Typography from "@mui/material/Typography";
-import ReactPlayer from "react-player";
 import { useState, useEffect } from "react";
 import Tooltip, { tooltipClasses } from "@mui/material/Tooltip";
 import Alert from "@mui/material/Alert";
 import Snackbar from "@mui/material/Snackbar";
-import Chip from "@mui/material/Chip";
-import Stack from "@mui/material/Stack";
 import Features from "./features";
 import StackList from "./stacklist";
+import ButtonGroup from "@mui/material/ButtonGroup";
+import VideoPlayer from "./videoplayer";
+import { Box } from "@mui/material";
+import ImageScroll from "./imagescroll";
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === "dark" ? "rgba(0,0,0,0)" : "#fff",
@@ -33,16 +34,6 @@ const StyledLink = styled(Link)(() => ({
     margin: "auto",
     marginLeft: "12px",
 }));
-
-const videoStyle = {
-    margin: "auto",
-    marginTop: "24px",
-    marginBottom: "48px",
-};
-
-// const Alert = React.forwardRef(function Alert(props, ref) {
-//     return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
-//   });
 
 function Project(props) {
     const [descriptions, setDescriptions] = useState([]);
@@ -119,14 +110,11 @@ function Project(props) {
                         </Snackbar>
                     </>
                 )}
-                {/* Project Video */}
-                <ReactPlayer
-                    controls={true}
-                    width="80%"
-                    style={videoStyle}
-                    className={classes.video}
-                    url={props.url}
-                />
+                {/* Project Preview */}
+                {/* <img src="./images/twthumb.png" sx={{ maxWidth: "200px" }} /> */}
+
+                {/* Project Image Previews */}
+                <ImageScroll title={props.title}/>
                 {/* Project Description */}
                 {descriptions.map((desc, index) => {
                     return (
@@ -134,6 +122,7 @@ function Project(props) {
                             key={index}
                             variant="body1"
                             textAlign="left"
+                            marginTop="14px"
                             marginBottom="14px"
                             gutterBottom
                         >
@@ -141,16 +130,28 @@ function Project(props) {
                         </Typography>
                     );
                 })}
-
-                <Grid container spacing={2}>
-                    <Grid xs={6}>
-                        <Features title={props.title} features={props.features} icons={props.icons}/>
-                    </Grid>
-                    <Grid xs={6}>
-                        <StackList title={props.title} stack={props.stack}/>
-                    </Grid>
-
-                </Grid>
+                {/* Buttons */}
+                <ButtonGroup
+                    variant="contained"
+                    size="large"
+                    aria-label="outlined primary button group"
+                    sx={{
+                        marginTop: "16px",
+                        marginBottom: "16px",
+                        width: "100%",
+                        padding: "12px",
+                        boxShadow:
+                            "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
+                    }}
+                >
+                    <Features
+                        title={props.title}
+                        features={props.features}
+                        icons={props.icons}
+                    />
+                    <StackList title={props.title} stack={props.stack} />
+                    <VideoPlayer title={props.title} url={props.url} />
+                </ButtonGroup>
             </Item>
         </Grid>
     );

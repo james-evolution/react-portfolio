@@ -1,38 +1,35 @@
 import * as React from "react";
 import List from "@mui/material/List";
 import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import Collapse from "@mui/material/Collapse";
-import ExpandLess from "@mui/icons-material/ExpandLess";
-import ExpandMore from "@mui/icons-material/ExpandMore";
-import LockIcon from "@mui/icons-material/Lock";
-import InstallMobileIcon from "@mui/icons-material/InstallMobile";
-import ListAltIcon from "@mui/icons-material/ListAlt";
-import GroupIcon from "@mui/icons-material/Group";
-import ManageSearchIcon from "@mui/icons-material/ManageSearch";
-import FilterListIcon from "@mui/icons-material/FilterList";
-import FileDownloadIcon from "@mui/icons-material/FileDownload";
-import ArchiveIcon from "@mui/icons-material/Archive";
-import MenuBookIcon from "@mui/icons-material/MenuBook";
-import ChatIcon from "@mui/icons-material/Chat";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import PasswordIcon from "@mui/icons-material/Password";
-import StorageIcon from "@mui/icons-material/Storage";
-import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-import ChecklistRtlIcon from "@mui/icons-material/ChecklistRtl";
-import InfoIcon from "@mui/icons-material/Info";
-import HeadsetMicIcon from "@mui/icons-material/HeadsetMic";
 import Grid from "@mui/material/Unstable_Grid2";
 import Chip from "@mui/material/Chip";
 import { useState, useEffect } from "react";
+import Button from "@mui/material/Button";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import Slide from "@mui/material/Slide";
+import classes from "./styles/stack.module.css";
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+    return <Slide direction="up" ref={ref} {...props} />;
+});
 
 function StackList(props) {
-    const [open, setOpen] = React.useState(false);
     const [techList, setTechList] = useState([]);
+    const [open, setOpen] = React.useState(false); // Dialog
+    const [scroll, setScroll] = React.useState("paper");
 
-    const handleClick = () => {
-        setOpen(!open);
+    const handleClickOpen = (scrollType) => () => {
+        setOpen(true);
+        setScroll(scrollType);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
     };
 
     useEffect(() => {
@@ -41,29 +38,64 @@ function StackList(props) {
 
     return (
         <Grid xs={12}>
-            <List
-                sx={{ width: "100%", bgcolor: "rgba(0,0,0,0.7)" }}
-                component="nav"
-            >
-                <ListItemButton onClick={handleClick}>
-                    <ListItemText primary="Built With" />
-                    {open ? <ExpandLess /> : <ExpandMore />}
-                </ListItemButton>
-
-                <Collapse in={open} timeout="auto" unmountOnExit>
-                    <List component="div" disablePadding>
-                        {techList.map((title, index) => (
-                            <ListItemButton key={index} sx={{ pl: 4 }}>
-                                <Chip
-                                    label={title}
-                                    color="success"
-                                    style={{}}
-                                />
-                            </ListItemButton>
-                        ))}
-                    </List>
-                </Collapse>
-            </List>
+            <div>
+                <Button
+                    variant="contained"
+                    endIcon={<OpenInNewIcon />}
+                    onClick={handleClickOpen("paper")}
+                    className={classes.button}
+                >
+                    Built With
+                </Button>
+                <Dialog
+                    open={open}
+                    onClose={handleClose}
+                    scroll={scroll}
+                    aria-labelledby="scroll-dialog-title"
+                    aria-describedby="scroll-dialog-description"
+                    TransitionComponent={Transition}
+                    keepMounted
+                >
+                    <DialogTitle
+                        id="scroll-dialog-title"
+                        sx={{
+                            background: "rgb(9,93,101)",
+                        }}
+                    >
+                        Built With
+                    </DialogTitle>
+                    <DialogContent
+                        dividers={scroll === "paper"}
+                        sx={{
+                            background: "rgb(9,73,81)",
+                        }}
+                    >
+                        <DialogContentText
+                            id="scroll-dialog-description"
+                            tabIndex={-1}
+                        >
+                            <List component="div" disablePadding>
+                                {techList.map((title, index) => (
+                                    <ListItemButton key={index} sx={{ pl: 4 }}>
+                                        <Chip
+                                            label={title}
+                                            color="success"
+                                            style={{}}
+                                        />
+                                    </ListItemButton>
+                                ))}
+                            </List>
+                        </DialogContentText>
+                    </DialogContent>
+                    <DialogActions
+                        sx={{
+                            background: "rgb(9,93,101)",
+                        }}
+                    >
+                        <Button onClick={handleClose}>Close</Button>
+                    </DialogActions>
+                </Dialog>
+            </div>
         </Grid>
     );
 }

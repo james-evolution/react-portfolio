@@ -10,6 +10,7 @@ import About from "./about";
 import Projects from "./projects";
 import { Divider, Typography } from "@mui/material";
 import Banner from "./banner";
+import Contact from "../pages/contact";
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor:
@@ -51,6 +52,17 @@ function GridContainer() {
                     <Grid className={classes.projects} xs={12}>
                         <Projects id="Projects" />
                     </Grid>
+
+                    <Divider sx={{ marginTop: "24px", color: "white" }}>
+                        <Typography variant="h4" component="h2">
+                            Contact Information
+                        </Typography>
+                    </Divider>
+
+                    <Grid className={classes.projects} xs={12}>
+                        <Contact/>
+                    </Grid>
+
                 </Grid>
             </Grid>
         </Box>
