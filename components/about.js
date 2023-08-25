@@ -11,6 +11,7 @@ import CodeIcon from "@mui/icons-material/Code";
 import Typography from "@mui/material/Typography";
 import Technologies from "./technologies";
 import Fluencies from "./fluencies";
+import Link from '@mui/material/Link';
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === "dark" ? "rgba(0,0,0,0.5)" : "#fff",
@@ -64,7 +65,14 @@ function About() {
                         gutterBottom
                         sx={{ marginTop: "18px" }}
                     >
-                        My name is Jeremy.
+                        Hello! My name is Jeremy.
+                    </Typography>
+                    <Typography
+                        variant="body1"
+                        gutterBottom
+                        sx={{ marginTop: "18px" }}
+                    >
+                        Welcome to my site. I built this with React and Material UI. It's <Link target="_blank" rel="noopener" href="https://github.com/james-evolution/react-portfolio">open-source!</Link>
                     </Typography>
                     <Typography
                         variant="body1"
