@@ -74,7 +74,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 function Projects() {
     return (
-        <Grid container spacing={2}>
+        <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
             {/* Projects */}
             <Grid xs={12}>
                 <Grid container spacing={2} sx={{ marginTop: "12px" }}>

@@ -11,6 +11,7 @@ import Projects from "./projects";
 import { Divider, Typography } from "@mui/material";
 import Banner from "./banner";
 import Contact from "./contact";
+import { Stack } from "@mui/material";
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor:
@@ -27,43 +28,45 @@ function GridContainer() {
     return (
         <Box className={classes.gridbox} sx={{ flexGrow: 1, height: "100vw" }}>
             <Grid container spacing={2}>
-                {/* Carousel */}
-                <Grid className={classes.carouselGrid} xs={12}>
-                    <Banner />
-                </Grid>
-
-                {/* About (Fluencies | About Me | Technologies) */}
-                <Grid className={classes.about} xs={12}>
-                    <About id="About" />
-                </Grid>
-
-                {/* Projects  */}
-                <Grid
-                    className={classes.projects}
-                    xs={12}
-                    sx={{ marginTop: "32px" }}
-                >
-                    <Divider id="#Projects" sx={{ color: "white" }}>
-                        <Typography variant="h4" component="h2">
-                            Projects
-                        </Typography>
-                    </Divider>
-
-                    <Grid className={classes.projects} xs={12}>
-                        <Projects id="Projects"/>
+                    {/* Carousel */}
+                    <Grid className={classes.carouselGrid} xs={12}>
+                        <Banner />
                     </Grid>
 
-                    <Divider id="Contact" sx={{ marginTop: "24px", color: "white" }}>
-                        <Typography variant="h4" component="h2">
-                            Contact Information
-                        </Typography>
-                    </Divider>
-
-                    <Grid className={classes.projects} xs={12}>
-                        <Contact/>
+                    {/* About (Fluencies | About Me | Technologies) */}
+                    <Grid className={classes.about} xs={12}>
+                        <About id="About" />
                     </Grid>
 
-                </Grid>
+                    {/* Projects  */}
+                    <Grid
+                        className={classes.projects}
+                        xs={12}
+                        sx={{ marginTop: "32px" }}
+                    >
+                        <Divider id="#Projects" sx={{ color: "white" }}>
+                            <Typography variant="h4" component="h2">
+                                Projects
+                            </Typography>
+                        </Divider>
+
+                        <Grid className={classes.projects} xs={12}>
+                            <Projects id="Projects" />
+                        </Grid>
+
+                        <Divider
+                            id="Contact"
+                            sx={{ marginTop: "24px", color: "white" }}
+                        >
+                            <Typography variant="h4" component="h2">
+                                Contact Information
+                            </Typography>
+                        </Divider>
+
+                        <Grid className={classes.projects} xs={12}>
+                            <Contact />
+                        </Grid>
+                    </Grid>
             </Grid>
         </Box>
     );

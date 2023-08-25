@@ -20,8 +20,8 @@ const Item = styled(Paper)(({ theme }) => ({
     textAlign: "center",
     marginTop: "5px",
     marginBottom: "20px",
-    marginLeft: "5px",
-    marginRight: "5px",
+    marginLeft: "24px",
+    marginRight: "24px",
     color: theme.palette.text.secondary,
     boxShadow:
         "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset",
@@ -29,7 +29,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 function About() {
     return (
-        <Grid className={classes.aboutGrid} container spacing={2}>
+        <Grid className={classes.aboutGrid} container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
             {/* Languages */}
             <Grid xs={4}>
                 <Item>

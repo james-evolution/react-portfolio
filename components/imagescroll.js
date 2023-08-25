@@ -30,7 +30,7 @@ function ImageScroll(props) {
         <>
             <div onClick={() => openLightbox}>
                 <ImageList
-                    sx={{ marginTop: "12px", height: "240px" }}
+                    sx={{ marginTop: "12px", height: "240px"}}
                     cols={2}
                     rowHeight={164}
                     onClick={() => setOpen(true)}
