@@ -3,7 +3,7 @@
 }
 
 .academic {
-    animation: glow 1s ease-in-out infinite alternate;
+    /* animation: glow 1s ease-in-out infinite alternate; */
     cursor: pointer;
 }
 
