@@ -1,0 +1,6 @@
+.imageContainer {
+    cursor: "pointer";
+    border-style: "solid";
+    border-color: "red";
+    border-width: 25px;
+}

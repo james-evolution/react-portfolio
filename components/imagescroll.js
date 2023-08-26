@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import { Button } from "@mui/material";
+import classes from "./styles/imagescroll.module.css";
 
 function ImageScroll(props) {
     const [open, setOpen] = useState(false);
@@ -30,7 +31,7 @@ function ImageScroll(props) {
         <>
             <div onClick={() => openLightbox}>
                 <ImageList
-                    sx={{ marginTop: "12px", height: "240px"}}
+                    sx={{ marginTop: "12px", height: "240px", cursor: "pointer"}}
                     cols={2}
                     rowHeight={164}
                     onClick={() => setOpen(true)}
