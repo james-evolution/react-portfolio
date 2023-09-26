@@ -93,8 +93,8 @@ function About() {
                         I've written software for a variety of companies and
                         clients (including celebrities), worked with
                         multi-million-dollar projects, and built full-stack web
-                        applications in both Java (with Spring) and JavaScript
-                        (with React/Next.js). I’ve also developed and deployed
+                        applications in Java (with Spring), JavaScript
+                        (with React/Next.js), and C# (ASP.NET). I’ve also developed and deployed
                         security software to protect my clients from hackers,
                         scammers, and other cybercriminals in the crypto & web3
                         industry.
@@ -108,6 +108,21 @@ function About() {
                         by tens of thousands of users and have handled
                         real-world financial transactions on the Ethereum
                         network.
+                    </Typography>
+                    <Typography
+                        variant="body1"
+                        gutterBottom
+                        sx={{ marginTop: "24px" }}
+                    >
+                        I've extensive experience building both the front and back-end of applications, setting up their environments, and deploying them. I've worked frequently with APIs, third-party libraries, and development frameworks. I'm experienced with Git, continuous integration, and Agile methodologies.
+                    </Typography>
+                    <Typography
+                        variant="body1"
+                        gutterBottom
+                        sx={{ marginTop: "24px" }}
+                        className={classes.tasked}
+                    >
+                        If tasked with building a full-stack application in a desired tech stack, with a list of desired features, desired architecture, and desired libraries: I will not disappoint.
                     </Typography>
                 </Item>
             </Grid>

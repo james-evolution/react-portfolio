@@ -54,11 +54,11 @@ function Fluencies() {
                     <StyledTableRow>
                         <StyledTableCell>Language</StyledTableCell>
                         <StyledTableCell align="right">
-                            Professional Experience
+                            Industry Experience
                         </StyledTableCell>
                         <StyledTableCell align="right" className={classes.academic}>
                             <Tooltip title="This column represents total time spent coding in these languages. This includes personal projects, studies, and work experience.">
-                                Academic Experience
+                                Total Experience
                             </Tooltip>
                         </StyledTableCell>
                     </StyledTableRow>
