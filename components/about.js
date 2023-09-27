@@ -94,7 +94,7 @@ function About() {
                         clients (including celebrities), worked with
                         multi-million-dollar projects, and built full-stack web
                         applications in Java (with Spring), JavaScript
-                        (with React/Next.js), and C# (ASP.NET). I’ve also developed and deployed
+                        (with React/Next.js), and C# (with ASP.NET). I’ve also developed and deployed
                         security software to protect my clients from hackers,
                         scammers, and other cybercriminals in the crypto & web3
                         industry.
