@@ -80,6 +80,16 @@ function Banner() {
                                                 color: "white",
                                             }}
                                         />
+                                        <Chip
+                                            label="C#"
+                                            color="success"
+                                            variant="outlined"
+                                            style={{
+                                                backgroundColor: "#0a444c",
+                                                borderColor: "#2631b5",
+                                                color: "white",
+                                            }}
+                                        />
                                     </Stack>
                                     <Stack direction="row" spacing={1}>
                                         <Chip
@@ -87,8 +97,9 @@ function Banner() {
                                             color="success"
                                             variant="outlined"
                                             style={{
+                                                backgroundColor: "#24d830",
                                                 borderColor: "#24d830",
-                                                color: "#24d830",
+                                                color: "black",
                                             }}
                                         />
                                         <Chip
@@ -96,8 +107,9 @@ function Banner() {
                                             color="success"
                                             variant="outlined"
                                             style={{
-                                                borderColor: "cyan",
-                                                color: "cyan",
+                                                backgroundColor: "#2bc6b7",
+                                                borderColor: "#2bc6b7",
+                                                color: "black",
                                             }}
                                         />
                                         <Chip
@@ -105,8 +117,19 @@ function Banner() {
                                             color="success"
                                             variant="outlined"
                                             style={{
+                                                backgroundColor: "#ef3774",
                                                 borderColor: "#ef3774",
-                                                color: "#ef3774",
+                                                color: "white",
+                                            }}
+                                        />
+                                           <Chip
+                                            label="ASP.NET"
+                                            color="success"
+                                            variant="outlined"
+                                            style={{
+                                                backgroundColor: "#0a444c",
+                                                borderColor: "#2631b5",
+                                                color: "white",
                                             }}
                                         />
                                     </Stack>
