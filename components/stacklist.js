@@ -48,8 +48,8 @@ function StackList(props) {
     }, []);
 
     return (
-        <Grid xs={12}>
-            <div>
+        // <Grid xs={12}>
+            <>
                 <Button
                     variant="contained"
                     endIcon={<OpenInNewIcon />}
@@ -105,8 +105,7 @@ function StackList(props) {
                         <Button onClick={handleClose}>Close</Button>
                     </DialogActions>
                 </Dialog>
-            </div>
-        </Grid>
+            </>
     );
 }
 

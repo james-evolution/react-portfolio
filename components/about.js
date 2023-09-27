@@ -122,7 +122,7 @@ function About() {
                         sx={{ marginTop: "24px" }}
                         className={classes.tasked}
                     >
-                        If tasked with building a full-stack application in a desired tech stack, with a list of desired features, desired architecture, and desired libraries: I will not disappoint.
+                        If tasked with building a full-stack application in a desired tech stack, with a list of desired features, desired architecture, and usage of desired libraries, I will not disappoint.
                     </Typography>
                 </Item>
             </Grid>

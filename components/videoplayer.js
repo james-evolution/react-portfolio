@@ -38,7 +38,7 @@ function VideoPlayer(props) {
     };
 
     return (
-        <div>
+        <>
             <Button
                 variant="contained"
                 endIcon={<OpenInNewIcon />}
@@ -91,7 +91,7 @@ function VideoPlayer(props) {
                     <Button onClick={handleClose}>Close</Button>
                 </DialogActions>
             </Dialog>
-        </div>
+        </>
     );
 }
 

@@ -48,66 +48,64 @@ function Features(props) {
     }, [open]);
 
     return (
-        <Grid xs={12}>
-            <div>
-                <Button
-                    variant="contained"
-                    endIcon={<OpenInNewIcon />}
-                    onClick={handleClickOpen("paper")}
-                    className={classes.button}
+        <>
+            <Button
+                variant="contained"
+                endIcon={<OpenInNewIcon />}
+                onClick={handleClickOpen("paper")}
+                className={classes.button}
+            >
+                Application Features
+            </Button>
+            <Dialog
+                open={open}
+                onClose={handleClose}
+                scroll={scroll}
+                aria-labelledby="scroll-dialog-title"
+                aria-describedby="scroll-dialog-description"
+                TransitionComponent={Transition}
+                keepMounted
+            >
+                <DialogTitle
+                    id="scroll-dialog-title"
+                    sx={{
+                        background: "rgb(9,93,101)",
+                    }}
                 >
                     Application Features
-                </Button>
-                <Dialog
-                    open={open}
-                    onClose={handleClose}
-                    scroll={scroll}
-                    aria-labelledby="scroll-dialog-title"
-                    aria-describedby="scroll-dialog-description"
-                    TransitionComponent={Transition}
-                    keepMounted
+                </DialogTitle>
+                <DialogContent
+                    dividers={scroll === "paper"}
+                    sx={{
+                        background: "rgb(9,73,81)",
+                    }}
                 >
-                    <DialogTitle
-                        id="scroll-dialog-title"
-                        sx={{
-                            background: "rgb(9,93,101)",
-                        }}
+                    <DialogContentText
+                        id="scroll-dialog-description"
+                        ref={descriptionElementRef}
+                        tabIndex={-1}
                     >
-                        Application Features
-                    </DialogTitle>
-                    <DialogContent
-                        dividers={scroll === "paper"}
-                        sx={{
-                            background: "rgb(9,73,81)",
-                        }}
-                    >
-                        <DialogContentText
-                            id="scroll-dialog-description"
-                            ref={descriptionElementRef}
-                            tabIndex={-1}
-                        >
-                            <List component="div" disablePadding>
-                                {featureTitles.map((title, index) => (
-                                    <ListItemButton key={index} sx={{ pl: 4 }}>
-                                        <ListItemIcon>
-                                            {props.icons[index]}
-                                        </ListItemIcon>
-                                        <ListItemText primary={title} />
-                                    </ListItemButton>
-                                ))}
-                            </List>
-                        </DialogContentText>
-                    </DialogContent>
-                    <DialogActions
-                        sx={{
-                            background: "rgb(9,93,101)",
-                        }}
-                    >
-                        <Button onClick={handleClose}>Close</Button>
-                    </DialogActions>
-                </Dialog>
-            </div>
-        </Grid>
+                        <List component="div" disablePadding>
+                            {featureTitles.map((title, index) => (
+                                <ListItemButton key={index} sx={{ pl: 4 }}>
+                                    <ListItemIcon>
+                                        {props.icons[index]}
+                                    </ListItemIcon>
+                                    <ListItemText primary={title} />
+                                </ListItemButton>
+                            ))}
+                        </List>
+                    </DialogContentText>
+                </DialogContent>
+                <DialogActions
+                    sx={{
+                        background: "rgb(9,93,101)",
+                    }}
+                >
+                    <Button onClick={handleClose}>Close</Button>
+                </DialogActions>
+            </Dialog>
+        </>
     );
 }
 

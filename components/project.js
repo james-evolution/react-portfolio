@@ -13,8 +13,8 @@ import Features from "./features";
 import StackList from "./stacklist";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import VideoPlayer from "./videoplayer";
-import { Box } from "@mui/material";
 import ImageScroll from "./imagescroll";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === "dark" ? "rgba(0,0,0,0)" : "#fff",
@@ -39,6 +39,7 @@ function Project(props) {
     const [descriptions, setDescriptions] = useState([]);
     const [stack, setStack] = useState([]);
     const [open, setOpen] = React.useState(false);
+    const matches = useMediaQuery("(min-width:600px)");
 
     const handleClick = () => {
         setOpen(true);
@@ -136,13 +137,15 @@ function Project(props) {
                     size="large"
                     aria-label="outlined primary button group"
                     sx={{
+                        justifyContent: "center",
                         marginTop: "16px",
                         marginBottom: "16px",
-                        width: "100%",
+                        width: "fit-content",
                         padding: "12px",
                         boxShadow:
                             "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
                     }}
+                    orientation={`${matches ? `horizontal` : `vertical`}`}
                 >
                     <Features
                         title={props.title}
