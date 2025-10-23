@@ -13,11 +13,11 @@ const itemData = [
         title: "React",
     },
     {
-        img: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcoresumo.com%2Fwp-content%2Fuploads%2F2019%2F12%2FJava_logo_icon-2048x1147.png&f=1&nofb=1&ipt=b69fb6af35ddc87221924acab3eeca4fce9c361f5915b4829d0f784b2c3e0e1e&ipo=images",
+        img: "https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/121px-Java_programming_language_logo.svg.png",
         title: "Java",
     },
     {
-      img: "https://www.eclipse.org/org/artwork/images/eclipse_ide_logo.png",
+      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Eclipse-Luna-Logo.svg/470px-Eclipse-Luna-Logo.svg.png?20181004114753",
       title: "Eclipse",
     },
     {
